@@ -5,19 +5,25 @@ import {
   StyleSheet,
   TouchableHighlight,
 } from 'react-native';
+import React from 'react';
+import {useNavigate} from 'react-router-native';
 
 const image = {
   uri: 'https://wallpapers.com/images/high/pink-hearts-background-2nmnoa3disyli8si.webp',
 };
 
 export default function MenuScreen() {
+  const navigate = useNavigate(); // hook do nawigacji
+
   return (
     <ImageBackground source={image} resizeMode="cover" style={stylesImg.image}>
       <View style={styles.container}>
         <Text style={styles.text}>Hejeczka :***xoxo</Text>
+
         <TouchableHighlight
           style={styles.button}
-          onPress={() => console.log('Pressed')}>
+          onPress={() => navigate('/notes', {})}>
+          {/* nawigacja do '/notes' które zostało zarejestrowane w App.tsx */}
           <View style={styles.button}>
             <Text style={styles.buttonText}>NOTATECZKI</Text>
           </View>
