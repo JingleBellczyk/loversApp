@@ -31,17 +31,19 @@ export default function MenuScreen() {
 
         <TouchableHighlight
           style={styles.button}
-          onPress={() => console.log('Pressed')}>
+          onPress={() => navigate('/mess', {})}>
+          {/* nawigacja do '/wiadomosci' które zostało zarejestrowane w App.tsx */}
           <View style={styles.button}>
-            <Text style={styles.buttonText}>PLOTECZKI</Text>
+            <Text style={styles.buttonText}>WIADMOŚCI</Text>
           </View>
         </TouchableHighlight>
 
         <TouchableHighlight
           style={styles.button}
-          onPress={() => console.log('Pressed')}>
+          onPress={() => navigate('/gallery', {})}>
+          {/* nawigacja do '/wiadomosci' które zostało zarejestrowane w App.tsx */}
           <View style={styles.button}>
-            <Text style={styles.buttonText}>MEMY</Text>
+            <Text style={styles.buttonText}>GALERIA</Text>
           </View>
         </TouchableHighlight>
       </View>
